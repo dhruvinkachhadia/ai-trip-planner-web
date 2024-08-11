@@ -75,7 +75,13 @@ function CreateTrip() {
       return;
     }
 
-    if (!formData?.noOfDays || !formData?.location || !formData?.budget || !formData?.traveler) {
+    // Validation for number of days exceeding 5
+    if (formData?.noOfDays > 5) {
+      toast("Sorry, we currently only support trips of 5 days or less.");
+      return;
+    }
+
+    if (!formData?.location || !formData?.budget || !formData?.traveler) {
       toast("Please fill all the details");
       return;
     }
