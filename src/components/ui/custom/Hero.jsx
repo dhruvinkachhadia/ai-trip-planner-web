@@ -1,6 +1,8 @@
 import React from 'react'
 import { Button } from '../button'
 import { Link } from 'react-router-dom'
+import Hero from './components/ui/custom/Hero';
+
 
 function Hero() {
   return (
